@@ -2,7 +2,7 @@
 
 Bem-vindo(a) ao código-fonte do meu portfólio! Um espaço que criei com carinho para apresentar meus projetos, habilidades e um pouco da minha jornada no mundo do desenvolvimento e da tecnologia. Sinta-se à vontade para explorar e interagir! 🚀
 
-🔗 **[Acesse a versão ao vivo AQUI!](#)** 🌐
+🔗 **[Acesse a versão ao vivo AQUI!](https://portfoliomislawislaine.vercel.app)** 🌐
 
 ## 🌟 Destaques do Projeto
 
