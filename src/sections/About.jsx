@@ -1,9 +1,9 @@
 import { TypeAnimation } from 'react-type-animation';
 import { useRef } from 'react';
 import Card from '../components/Card';
-import { Globe } from '../components/Globe';
-import CopyEmailButton from '../components/CopyEmailButton';
 import { Frameworks } from '../components/Frameworks';
+import GridThree from '../components/GridThree';
+import GridFour from '../components/GridFour';
 
 const About = () => {
   const grid2Container = useRef();
@@ -31,99 +31,83 @@ const About = () => {
               />
             </p>
             <p className="subtext">
-              Nos últimos meses, tenho desenvolvido ativamente minhas
-              habilidades em frontend e backend para construir softwares
-              dinâmicos e aplicações robustas.
+              Desenvolvedora Full Stack em PD&I para o setor público, com
+              atuação em arquitetura de microsserviços, soluções enterprise e
+              liderança técnica. Focada em entregar aplicações web e mobile de
+              alta performance, unindo inovação, boas práticas e qualidade de
+              software.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>
         {/* Grid 2 */}
-        <div className="grid-default-color grid-2">
+        <div className="grid-black-color grid-2">
           <div
             ref={grid2Container}
             className="flex items-center justify-center w-full h-full"
           >
-            <p className="flex items-end text-5xl text-gray-500">
+            <p className="flex items-end text-5xl text-[#a67246] opacity-30 font-bold">
               Código é Arte
             </p>
             <Card
               style={{ rotate: '75deg', top: '30%', left: '20%' }}
-              text="React"
+              text="Angular"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: '-30deg', top: '60%', left: '45%' }}
-              text="Tailwindcss"
+              text="Spring Boot"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: '90deg', bottom: '30%', left: '70%' }}
-              text="OpenCV"
+              text="React"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: '-45deg', top: '55%', left: '0%' }}
-              text="Matplotlib"
+              text="Docker"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: '20deg', top: '10%', left: '38%' }}
-              text="Numpy"
+              text="Python"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: '30deg', top: '70%', left: '70%' }}
-              image="assets/logos/javascript.svg"
+              image="assets/logos/nodejs.svg"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: '-45deg', top: '70%', left: '25%' }}
-              image="assets/logos/java.svg"
+              image="assets/logos/tailwindcss.svg"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: '-25deg', top: '5%', left: '10%' }}
-              image="assets/logos/python.svg"
+              image="assets/logos/postgresql.svg"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: '-25deg', top: '5%', left: '70%' }}
-              image="assets/logos/cplusplus.svg"
+              image="assets/logos/mongodb.svg"
               containerRef={grid2Container}
             />
           </div>
         </div>
         {/* Grid 3 */}
-        <div className="grid-black-color grid-3">
-          <div className="z-10 w-[50%]">
-            <p className="headtext">Fuso Horário</p>
-            <p className="subtext">
-              Estou baseada em Marte e aberta a trabalhos remotos em qualquer
-              lugar do mundo. 🌍🚀
-            </p>
-          </div>
-          <figure className="absolute left-[30%] top-[10%]">
-            <Globe />
-          </figure>
-        </div>
+        <GridThree />
         {/* Grid 4 */}
-        <div className="grid-special-color grid-4">
-          <div className="flex flex-col items-center justify-center gap-4 size-full">
-            <p className="text-center headtext">
-              Gostaria de iniciar um projeto juntos?
-            </p>
-            <CopyEmailButton />
-          </div>
-        </div>
+        <GridFour />
         {/* Grid 5 */}
-        <div className="grid-default-color grid-5">
+        <div className="grid-black-color grid-5">
           <div className="z-10 w-[50%]">
-            <p className="headText">Teck Stack</p>
+            <p className="headText">Tech Stack</p>
             <p className="subtext">
-              Tive acesso a diversas linguagens, frameworks e ferramentas,
-              utilizando-as para desenvolver aplicações funcionais e bem
-              estruturadas.
+              Trabalho com diversas linguagens, frameworks e ferramentas
+              modernas, utilizando-as para desenvolver aplicações escaláveis,
+              funcionais e bem estruturadas.
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
