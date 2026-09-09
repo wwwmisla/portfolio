@@ -253,27 +253,38 @@ export const mySocials = [
 
 export const experiences = [
   {
-    title: 'Gerente de Software e Full Stack Developer',
-    job: 'Um Robô Por Aluno (URA) – ECT/UFRN',
-    date: '2023 - Atual',
+    title: 'Bolsista | Desenvolvedora Full Stack',
+    job: 'P&D JFRN / FUNPEC / UFRN',
+    date: '2025 - Atual',
     contents: [
-      'Atuo como Gerente de Software no projeto URA, coordenando o desenvolvimento e garantindo a integração eficiente entre os membros da equipe.',
-      'Participo ativamente no desenvolvimento de aplicações com foco em acessibilidade, utilizando tecnologias modernas.',
-      'Contribuo na manutenção e melhoria contínua dos sistemas do projeto, assegurando desempenho, usabilidade e aderência às metas.',
-      'Colaboro com a equipe na idealização, organização e execução de etapas do projeto, promovendo soluções práticas, inclusivas e inovadoras.',
-      'Participo de reuniões técnicas e de planejamento, promovendo uma gestão colaborativa centrada em boas práticas de desenvolvimento e acessibilidade.',
+      'Desenvolvimento de produtos tecnológicos em P&D destinados a magistrados e servidores da Justiça Federal/RN, com integração a sistemas legados de órgãos públicos, vinculados ao PPgCTI.',
+      'Liderança técnica de uma equipe de 4 desenvolvedores, direcionando a arquitetura de soluções web e mobile, distribuindo demandas e garantindo a qualidade do software.',
+      'Gestão do fluxo de entrega contínua, realizando code review e monitoramento de pipelines de CI/CD para aprovação de Merge Requests.',
+      'Implementação de interfaces web de alta performance com Angular, TypeScript, TailwindCSS e Metronic 9, consumindo APIs REST integradas a PostgreSQL e MongoDB.',
+      'Desenvolvimento de aplicações mobile com Flutter e contribuição em microsserviços backend utilizando Python (FastAPI) e Java (Spring Boot).',
+      'Implementação de testes unitários, apoio na migração de ChromaDB para PG Vector em soluções RAG, e uso de Docker e Kubernetes.',
     ],
   },
   {
-    title: 'Full Stack Developer',
+    title: 'Gerente de Software e Full Stack Developer',
+    job: 'Um Robô Por Aluno (URA) – ECT/UFRN',
+    date: '2023 - 2025',
+    contents: [
+      'Liderança e gerenciamento do ciclo de vida do software, coordenando a equipe e distribuindo demandas técnicas com foco em inovação e tecnologia acessível.',
+      'Condução do alinhamento da equipe para execução de escopos e prazos, garantindo manutenção, usabilidade e melhoria contínua dos sistemas.',
+      'Atuação prática no desenvolvimento full stack de aplicações voltadas para inclusão e acessibilidade.',
+      'Participação em reuniões técnicas e de planejamento estratégico centradas em boas práticas de engenharia de software.',
+    ],
+  },
+  {
+    title: 'Pesquisadora | Desenvolvedora Full Stack',
     job: 'RaCE: Robótica para Crianças no Espectro – IFRN',
     date: '2021 - 2023',
     contents: [
-      'Desenvolvi um aplicativo educacional em Java para programação das funções da robô Label, adaptado às necessidades de crianças com TEA.',
-      'Implementei a comunicação entre o software e os circuitos eletrônicos da robô, integrando lógica de programação e controle físico.',
-      'Participei da montagem e testes do protótipo, garantindo a funcionalidade e a interação adequada entre hardware e software.',
-      'Colaborei na elaboração e aplicação de oficinas de robótica educacional, focadas no desenvolvimento do raciocínio lógico e da coordenação motora.',
-      'Contribuí com estudos sobre autismo e robótica educacional, integrando aspectos técnicos às necessidades pedagógicas do projeto.',
+      'Desenvolvimento de um aplicativo em Java para controle de um robô educacional voltado para crianças com Transtorno do Espectro Autista (TEA).',
+      'Implementação da comunicação entre o software e os circuitos eletrônicos da robô, integrando lógica de programação e controle físico.',
+      'Participação na montagem, testes de protótipos e aplicação de oficinas de robótica educacional.',
+      'Colaboração em estudos multidisciplinares integrando aspectos técnicos às necessidades pedagógicas.',
     ],
   },
 ];
@@ -288,7 +299,8 @@ export const education = [
     img: 'https://avatar.vercel.sh/ti',
   },
   {
-    title: 'Bacharelado em Ciências e Tecnologia',
+    title:
+      'Bacharelado em Ciências e Tecnologia com Ênfase em Tecnologia de Computação',
     institution: '@ectufrn',
     date: '2023 - atual',
     type: 'Graduação',
@@ -322,7 +334,7 @@ export const education = [
   {
     title: 'Curso de JavaScript e TypeScript do básico ao avançado JS/TS',
     institution: '@udemy',
-    date: '2024 - atual',
+    date: '2024 - 2026',
     type: 'Formação Complementar',
     body: 'Formação completa em desenvolvimento front-end e back-end com foco em JavaScript moderno, TypeScript, padrões de projeto e boas práticas.',
     img: 'https://avatar.vercel.sh/cjt',

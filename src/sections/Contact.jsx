@@ -13,9 +13,11 @@ const Contact = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertType, setAlertType] = useState('success');
   const [alertMessage, setAlertMessage] = useState('');
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
   const showAlertMessage = (type, message) => {
     setAlertType(type);
     setAlertMessage(message);
@@ -24,12 +26,12 @@ const Contact = () => {
       setShowAlert(false);
     }, 5000);
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
 
     try {
-      // console.log(formData);
       await emailjs.send(
         'service_por9o64',
         'template_usd36tj',
@@ -44,46 +46,53 @@ const Contact = () => {
       );
       setIsLoading(false);
       setFormData({ name: '', email: '', message: '' });
-      showAlertMessage('success', 'Sua mensagem foi enviada!');
+      showAlertMessage('success', 'Sua mensagem foi enviada com sucesso!');
     } catch (error) {
       setIsLoading(false);
       console.log(error);
-      showAlertMessage('danger', 'Algo deu errado!');
+      showAlertMessage('danger', 'Algo deu errado! Tente novamente.');
     }
   };
 
   return (
     <section
-      className="relative flex items-center c-space section-spacing"
+      className="relative flex items-center justify-center c-space section-spacing"
       id="contact"
     >
       <Particles
         className="absolute inset-0 -z-50"
         quantity={100}
         ease={80}
-        color={'#ffffff'}
+        color={'#d1b187'}
         refresh
       />
       {showAlert && <Alert type={alertType} text={alertMessage} />}
-      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
-        <div className="flex flex-col items-start w-full gap-5 mb-10">
-          <h2 className="text-heading">Bora bater um papo?</h2>
-          <p className="font-normal text-neutral-400">
-            Se você tem um projeto em mente - seja um app, sistema, ideia
-            criativa ou qualquer solução tecnológica - adoraria ajudar a tornar
+
+      <div className="flex flex-col items-center justify-center w-full max-w-lg p-6 md:p-8 mx-auto border border-[#a67246]/20 rounded-2xl bg-primary shadow-2xl relative backdrop-blur-md">
+        {/* Cabeçalho do Card */}
+        <div className="flex flex-col items-start w-full gap-2 mb-8">
+          <span className="text-xs uppercase tracking-widest text-[#a67246] font-semibold">
+            Conexão Direta
+          </span>
+          <h2 className="text-heading text-[#e4d8c5]">Bora bater um papo?</h2>
+          <p className="text-sm md:text-base text-[#d1b187]/80 text-pretty">
+            Se você tem um projeto em mente — seja um app, sistema corporativo,
+            ideia criativa ou solução tecnológica — adoraria ajudar a tornar
             isso realidade :)
           </p>
         </div>
+
+        {/* Formulário */}
         <form className="w-full" onSubmit={handleSubmit}>
           <div className="mb-5">
-            <label htmlFor="name" className="feild-label">
+            <label htmlFor="name" className="field-label text-[#e4d8c5]">
               Nome Completo
             </label>
             <input
               type="text"
               name="name"
               id="name"
-              className="field-input field-input-focus"
+              className="field-input field-input-focus text-[#e4d8c5]"
               placeholder="seu nome"
               autoComplete="name"
               required
@@ -91,15 +100,16 @@ const Contact = () => {
               onChange={handleChange}
             />
           </div>
+
           <div className="mb-5">
-            <label htmlFor="email" className="field-label">
+            <label htmlFor="email" className="field-label text-[#e4d8c5]">
               E-mail
             </label>
             <input
               type="email"
               name="email"
               id="email"
-              className="field-input field-input-focus"
+              className="field-input field-input-focus text-[#e4d8c5]"
               placeholder="seuemail@email.com"
               autoComplete="email"
               required
@@ -107,27 +117,30 @@ const Contact = () => {
               onChange={handleChange}
             />
           </div>
-          <div className="mb-5">
-            <label htmlFor="message" className="field-label">
+
+          <div className="mb-6">
+            <label htmlFor="message" className="field-label text-[#e4d8c5]">
               Mensagem
             </label>
             <textarea
               name="message"
               id="message"
               rows="4"
-              className="field-input field-input-focus"
+              className="field-input field-input-focus text-[#e4d8c5] resize-none"
               placeholder="escreva a sua mensagem..."
-              autoComplete="message"
+              autoComplete="off"
               required
               value={formData.message}
               onChange={handleChange}
             />
           </div>
+
           <button
             type="submit"
-            className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
+            disabled={isLoading}
+            className="w-full py-3.5 text-base font-semibold text-center text-[#e4d8c5] bg-gradient-to-r from-[#a67246] to-[#724928] hover:from-[#c27a3c] hover:to-[#a67246] rounded-lg shadow-lg cursor-pointer hover-animation transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {!isLoading ? 'Enviar' : 'Enviando...'}
+            {isLoading ? 'Enviando...' : 'Enviar'}
           </button>
         </form>
       </div>
